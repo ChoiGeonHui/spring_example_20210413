@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.lesson02.dao.UsedGoodsDAO;
 import com.example.lesson02.model.UsedGoods;
 
-@Service
+@Service //비즈니스 로직이 담기는 용도의 스프링빈이 담기는 용도
 public class UsedGoodsBO{
 	
 	@Autowired
@@ -16,8 +16,6 @@ public class UsedGoodsBO{
 	
 	
 	public List<UsedGoods> getUsedGoodsList(){
-		
-		
 		return usedGoodsDAO.selectUsedGoodsList();
 	}
 
