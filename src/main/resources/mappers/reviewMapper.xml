@@ -21,8 +21,56 @@
 		`id`= #{id};
 
 	</select>
- 
-
-
+	
+	<select id="insertReview" parameterType="com.example.lesson03.model.Review">
+	
+	insert
+	into
+	review
+	(
+		storeName
+		,menu
+		,userName
+		,point
+		,review
+		,createdAt
+		,updatedAt
+	)
+	values
+	(
+	#{storeName}
+	,#{menu}
+	,#{userName}
+	,#{point}
+	,#{review}
+	,NOW()
+	,NOW()
+	)
+	</select>
+	
+	<select id="insertReviewAsField" parameterType="map">
+	insert into review
+	(
+		storeName
+		,menu
+		,userName
+		,point
+		,review
+		,createdAt
+		,updatedAt
+	)
+	values
+	(
+	#{storeName}
+	,#{menu}
+	,#{userName}
+	,#{point}
+	,#{review}
+	,NOW()
+	,NOW()
+	)
+	
+	
+	</select>
 
 </mapper>

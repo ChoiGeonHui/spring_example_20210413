@@ -26,5 +26,36 @@ public class ReviewRestController {
 		return reviewBO.getReview(id);
 		
 	}
+	
+	
+	@RequestMapping("/lesson03/ex02")
+	public String ex02() {
+		Review review = new Review();
+		review.setStoreName("보람 삼겹살");
+		review.setMenu("삼겹혼합세트");
+		review.setUserName("홍길동");
+		review.setPoint(4.5);
+		review.setReview("혼자 먹기 딱 적당하네요.");
+		
+		int row = reviewBO.insertReview(review); //insert 된 row수를 리턴받는다.
+		
+		return "success row count : " + row;
+		//@responseBody로 인해 String 값 자체가 @responseBody 에 담긴다
+		
+		
+	}
+	
+	@RequestMapping("/lesson03/ex02/2")
+	public String ex02_2() {
+		int row = reviewBO.insertReviewAsField("도미노피자","콤비네이션 R","신바다",5.0,"역시 맛있다");
+		
+		return "success row count : " + row;
+	}
+	
+	
+	
+	
+	
+	
 
 }
