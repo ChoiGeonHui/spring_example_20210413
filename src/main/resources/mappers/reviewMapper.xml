@@ -22,7 +22,7 @@
 
 	</select>
 	
-	<select id="insertReview" parameterType="com.example.lesson03.model.Review">
+	<insert id="insertReview" parameterType="com.example.lesson03.model.Review">
 	
 	insert
 	into
@@ -46,9 +46,9 @@
 	,NOW()
 	,NOW()
 	)
-	</select>
+	</insert>
 	
-	<select id="insertReviewAsField" parameterType="map">
+	<insert id="insertReviewAsField" parameterType="map">
 	insert into review
 	(
 		storeName
@@ -71,6 +71,7 @@
 	)
 	
 	
-	</select>
+	</insert>
+	
 
 </mapper>
