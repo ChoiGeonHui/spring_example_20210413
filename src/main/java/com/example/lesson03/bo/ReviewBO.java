@@ -26,4 +26,11 @@ public class ReviewBO {
 			point, review);
 	}
 
+	public int updateReview(int id, String review) {
+		return reviewDAO.updateReview(id, review);
+	}
+	
+	public int deleteReviewById(int id) {
+		return reviewDAO.deleteReviewById(id);
+	}
 }

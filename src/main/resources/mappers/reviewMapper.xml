@@ -73,5 +73,24 @@
 	
 	</insert>
 	
+	<update id="updateReview" parameterType="map">
+	update
+	review
+	set
+	review= #{review},
+	updatedAt = now()
+	where
+	id = #{id}
+	</update>
+	
+	<delete id="deleteReviewById" parameterType="int">
+	delete
+	from 
+	review
+	where
+	id =#{id}
+	
+	</delete>
+	
 
 </mapper>

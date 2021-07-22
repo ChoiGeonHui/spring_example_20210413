@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.lesson04.dao.NewUserDAO">
+	<insert id="insertNewUser" parameterType="map">
+		INSERT INTO newuser
+		(
+		name,
+		yyyymmdd,
+		email,
+		introduce,
+		createdAt,
+		updatedAt
+		)
+		values
+		(
+		#{name},
+		#{yyyymmdd},
+		#{email},
+		#{introduce},
+		now(),
+		now()
+		)
+
+	</insert>
+	
+	<select id="selectLastUser" resultType="com.example.lesson04.model.NewUser">
+	select
+	id,
+	name,
+	yyyymmdd,
+	email,
+	introduce,
+	createdAt,
+	updatedAt
+	from
+	newuser
+	order by
+	id desc
+	limit 1
+	
+	</select>
+
+
+
+</mapper>
