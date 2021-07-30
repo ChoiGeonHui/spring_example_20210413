@@ -12,7 +12,7 @@ public class NewUserBO {
 	@Autowired
 	NewUserDAO newUserDAO;
 	
-	public void insertNewUser(
+	public void addNewUser(
 			String name,String yyyymmdd,String email,String introduce) {
 		newUserDAO.insertNewUser(name, yyyymmdd, email, introduce);
 	}

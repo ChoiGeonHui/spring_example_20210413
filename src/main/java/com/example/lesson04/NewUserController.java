@@ -33,7 +33,7 @@ public class NewUserController {
 			) {
 		
 		//db insert
-		newUserBO.insertNewUser(name, yyyymmdd, email, introduce);
+		newUserBO.addNewUser(name, yyyymmdd, email, introduce);
 		
 		return "lesson04/afterAddUser";
 	}

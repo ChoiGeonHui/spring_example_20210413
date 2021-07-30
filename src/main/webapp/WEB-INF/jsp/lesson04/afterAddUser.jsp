@@ -20,7 +20,8 @@
 </head>
 <body>
 <div class="container">
-<h1 class="display-1">입력 성공</h1>
+<h1 class="display-1">입력 성공
+</h1>
 </div>
 
 </body>
